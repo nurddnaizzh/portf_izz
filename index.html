@@ -156,12 +156,13 @@
                 <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form action="#">
-                    <input type="text" name="Name" placeholder="Your Name" required>
+                <form name="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button class="btn btn2" type="submit">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -169,6 +170,26 @@
         <p>Copyright ©️ Nuraddina. Made with <i class="fa-solid fa-heart"></i> Easy Tutorials</p>
     </div>
   </div>
+
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbzBBOU-iZxPrZT-uTsk-nLA34z6p0J-SFMd1o-F_OcMNsRJhihr6pUz1j5q14XRqx36/exec'
+	const form = document.forms['contact-form'];
+    const msg = document.getElementById("msg");
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => {
+                msg.innerHTML = "Form successfully submitted!";
+                setTimeout(function() {
+                    msg.innerHTML = "";
+                }, 5000);
+                form.reset();
+            })
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
 
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
