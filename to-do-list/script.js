@@ -15,5 +15,6 @@ function addTask() {
         span.innerHTML = "\u00d7"; // Unicode for multiplication sign (×)
         li.appendChild(span);
     }
+    // Clear the input box
     inputBox.value = "";
 }
