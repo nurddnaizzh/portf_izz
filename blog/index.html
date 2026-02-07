@@ -1,16 +1,44 @@
 <!-- tutorial video: https://www.youtube.com/watch?v=yy4jHsyP17Q&list=PL3pyLl-dgiqBSBsC5O5AQHN1UsUk-60nc -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Kitty's Blog</title>
-</head>
-<body>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- google fonts  -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Candal&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,500;1,500&display=swap");
+    </style>
+  </head>
+  <body>
     <header>
-        <h1>Welcome to Kitty's Blog</h1>
+      <div class="logo">
+        <h1 class="logo-text"><span>Kitty</span>Ku</h1>
+      </div>
+      <i class="fa-solid fa-bars menu-toggle"></i>
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <!-- <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Login</a></li> -->
+        <li>
+          <a href="#">Admin</a>
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="logout">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
     </header>
-</body>
+  </body>
 </html>
