@@ -36,8 +36,62 @@ header .logo-text span {
 
 header ul {
     float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+}
+
+header ul li ul {
+    position: absolute;
+    top: 66px;
+    right: 0;
+    width: 180px;
+    display: none;
+}
+
+/* header ul li:hover ul {
+    display: block;
+} */
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px;
+    background: white;
+    color: #444;
+}
+
+header ul li ul li a.logout {
+    color: red;
+}
+
+header ul li ul li a:hover {
+    background: #d5d6d6;
+}
+
+header ul li a {
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    background: #006669;
+    transition: 0.5s ease;
 }
 
 header .menu-toggle {
     display: none;
+}
+
+.fa-user, .fa-chevron-down {
+    font-size: .8em;
 }
