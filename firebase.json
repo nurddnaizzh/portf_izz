@@ -1,0 +1,47 @@
+{
+  "firestore": {
+    "database": "(default)",
+    "location": "asia-east2",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
+  "headers": [
+    {
+      "source": "**/*.@(js|css)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public,max-age=31536000,immutable" }
+      ]
+    }
+  ]
+},
+"ignore": [
+  "firebase.json",
+  "**/.*",
+  "**/node_modules/**",
+  "**/*.exe",
+  "**/*.dll",
+  "**/*.sh",
+  "**/*.bin",
+  "**/*.wasm",
+  "**/*.ps1",
+  "**/*.bat",
+  "**/*.cmd",
+  "**/*.com",
+  "**/*.cpl",
+  "**/*.msc",
+  "**/*.scr",
+  "**/*.sys",
+  "**/*.drv",
+  "**/*.efi",
+  "**/*.vbs",
+  "**/Thumbs.db",
+  "**/.DS_Store"
+]
+}
