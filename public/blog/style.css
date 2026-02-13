@@ -2,9 +2,10 @@
     box-sizing: border-box;
 }
 
-body {
-    padding: 0px;
-    margin: 0px;
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
     background: #f6f6f6;
     font-family: 'Lora', serif;
 }
@@ -151,6 +152,10 @@ header .menu-toggle {
 /* .nav li ul {
     left: 0;
 } */
+
+.page-wrapper {
+    min-height: 100%;
+}
 
 .page-wrapper a:hover {
     color: #006669;
@@ -314,6 +319,11 @@ header .menu-toggle {
     color: #d3d3d3;
     height: 400px;
     position: relative;
+}
+
+.footer .footer-content {
+    border: 1px solid red;
+    height: 350px;
 }
 
 .footer .footer-bottom {
