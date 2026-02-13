@@ -307,6 +307,27 @@ header .menu-toggle {
     transition: all 0.3s;
 }
 
+/* Footer */
+
+.footer {
+    background: #303036;
+    color: #d3d3d3;
+    height: 400px;
+    position: relative;
+}
+
+.footer .footer-bottom {
+    background: #343a40;
+    color: #686868;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
 /* Media queries */
 
 @media only screen and (max-width: 750px) {
