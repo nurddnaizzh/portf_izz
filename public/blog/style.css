@@ -333,6 +333,14 @@ header .menu-toggle {
     border: 1px solid white;
 }
 
+.footer .footer-content h1, .footer .footer-content h2 {
+    color: white;
+}
+
+.footer .footer-content .about h1 span {
+    color: #05f7ff;
+}
+
 .footer .footer-bottom {
     background: #343a40;
     color: #686868;
