@@ -236,6 +236,18 @@ header .menu-toggle {
     float: left;
 }
 
+.content .main-content.single {
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.content .main-content.single .post-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .content .main-content .post {
     width: 95%;
     height: 270px;
@@ -243,6 +255,30 @@ header .menu-toggle {
     border-radius: 5px;
     background: white;
     position: relative;
+}
+
+.content .popular .post {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.content .popular .post img {
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin-right: 10px;
+}
+
+.content .main-content .post .post-preview i {
+    color: #757575;
+    font-size: .8em;
+}
+
+.content .main-content .post .preview-text {
+    line-height: 1.5em;
+    font-size: 1.03em;
+    color: #444;
 }
 
 .content .main-content .post .read-more {
@@ -281,6 +317,10 @@ header .menu-toggle {
     width: 30%;
     float: left;
     height: 300px;
+}
+
+.content .sidebar.single {
+    padding: 0 10px;
 }
 
 .content .sidebar .section {
@@ -397,6 +437,8 @@ header .menu-toggle {
 
 .footer .footer-content .contact-form .contact-btn {
     float: right;
+    font-size: 1.1em;
+    font-family: 'Lora', serif;
 }
 
 .footer .footer-bottom {
