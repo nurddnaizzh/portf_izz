@@ -39,6 +39,8 @@ a {
     color: white;
     border: 1px solid transparent;
     border-radius: .25em;
+    font-size: 1.08em;
+    font-family: 'Lora', serif;
 }
 
 .btn-big {
@@ -355,6 +357,31 @@ header .menu-toggle {
 .content .sidebar .section.topics ul li a:hover {
     padding-left: 10px;
     transition: all 0.3s;
+}
+
+/* Auth pages */
+.auth-content {
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+.auth-content .form-title {
+    text-align: center;
+}
+
+.auth-content form div {
+    margin-bottom: 10px;
+}
+
+.auth-content form p {
+    text-align: center;
+}
+
+.auth-content form p a {
+    text-decoration: underline;
 }
 
 /* Footer */
