@@ -1,0 +1,107 @@
+<!-- tutorial video: https://www.youtube.com/watch?v=yy4jHsyP17Q&list=PL3pyLl-dgiqBSBsC5O5AQHN1UsUk-60nc -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- custom styling -->
+    <link rel="stylesheet" href="../../style.css" />
+    <!-- admin styling -->
+    <link rel="stylesheet" href="../../admin.css" />
+
+    <title>Admin Section - Manage Topics</title>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- google fonts  -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Candal&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,500;1,500&display=swap");
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1 class="logo-text"><span>Kitty</span>Ku</h1>
+      </div>
+      <i class="fa-solid fa-bars menu-toggle"></i>
+      <ul class="nav">
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+            Coolest Admin
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <ul>
+            <li><a href="#" class="logout">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+
+    <!-- admin page wrapper -->
+
+    <div class="admin-wrapper">
+      <!-- left sidebar -->
+      <div class="left-sidebar">
+        <ul>
+          <li><a href="../posts/indexPost.html">Manage Posts</a></li>
+          <li><a href="../users/indexUser.html">Manage Users</a></li>
+          <li><a href="indexTopic.html">Manage Topics</a></li>
+        </ul>
+      </div>
+      <!-- end of left sidebar -->
+
+      <!-- admin content -->
+      <div class="admin-content">
+        <div class="button-group">
+          <a href="createTopic.html" class="btn btn-big">Add Topic</a>
+          <a href="indexTopic.html" class="btn btn-big">Manage Topics</a>
+        </div>
+
+        <div class="content">
+          <h2 class="page-title">Manage Topics</h2>
+
+          <table>
+            <thead>
+              <th>SN</th>
+              <th>Name</th>
+              <th colspan="2">Action</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Poetry</td>
+                <td><a href="#" class="edit">edit</a></td>
+                <td><a href="#" class="delete">delete</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Life Lessons</td>
+                <td><a href="#" class="edit">edit</a></td>
+                <td><a href="#" class="delete">delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- end of admin content -->
+    </div>
+    <!-- end of page wrapper -->
+
+    <!-- JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- custom script -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

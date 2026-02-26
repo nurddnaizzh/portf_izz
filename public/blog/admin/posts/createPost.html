@@ -75,7 +75,7 @@
               <label>Title</label>
               <input type="text" name="title" class="text-input" />
               <label>Body</label>
-              <div id="body"></div>
+              <textarea name="post" id="body"></textarea>
             </div>
             <div>
               <label>Topic</label>
@@ -84,7 +84,10 @@
                 <option value="Life Lessons">Life Lessons</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-big">Add Post</button>
+            
+            <div>
+              <button type="submit" class="btn btn-big">Add Post</button>
+            </div>
           </form>
         </div>
       </div>
@@ -106,13 +109,21 @@
     <!-- ckeditor 5 -->
     <script src="https://cdn.ckeditor.com/ckeditor5/47.5.0/ckeditor5.umd.js"></script>
     <script>
-      const { ClassicEditor, Essentials, Paragraph, Heading, Bold, Italic, Font } =
-        CKEDITOR;
-      // Create a free account and get <YOUR_LICENSE_KEY> 
+      const {
+        ClassicEditor,
+        Essentials,
+        Paragraph,
+        Heading,
+        Bold,
+        Italic,
+        Font,
+      } = CKEDITOR;
+      // Create a free account and get <YOUR_LICENSE_KEY>
       // active, expires on Feb 26, 2027
       // https://portal.ckeditor.com/organizations/3fawvgpjndv8/subscriptions/wbWTH7epW9-v/keys
       ClassicEditor.create(document.querySelector("#body"), {
-        licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDM2ODYzOTksImp0aSI6IjVkZmE5YzkxLTc5NzEtNDVmYi05YWI4LTM4ODMxZjUxMTQxMiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJlNjhlZmNjOCJ9.WjgST9hw5OUz1BBX2jN8V2hauyq5KGjqDqi-3AzHRkczZgmgHJBlkxRXNnf3jC_35kMTLeXVLlEKi1fhEkwHXg",
+        licenseKey:
+          "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDM2ODYzOTksImp0aSI6IjVkZmE5YzkxLTc5NzEtNDVmYi05YWI4LTM4ODMxZjUxMTQxMiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJlNjhlZmNjOCJ9.WjgST9hw5OUz1BBX2jN8V2hauyq5KGjqDqi-3AzHRkczZgmgHJBlkxRXNnf3jC_35kMTLeXVLlEKi1fhEkwHXg",
         plugins: [Essentials, Paragraph, Heading, Bold, Italic, Font],
         toolbar: [
           "undo",
