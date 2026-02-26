@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="../../style.css" />
     <!-- admin styling -->
     <link rel="stylesheet" href="../../admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.ckeditor.com/ckeditor5/47.5.0/ckeditor5.css"
+    />
 
-    <title>Admin Section - Manage Posts</title>
+    <title>Admin Section - Add Posts</title>
 
     <!-- font awesome -->
     <link
@@ -46,18 +50,91 @@
     <!-- admin page wrapper -->
 
     <div class="admin-wrapper">
+      <!-- left sidebar -->
+      <div class="left-sidebar">
+        <ul>
+          <li><a href="indexPost.html">Manage Posts</a></li>
+          <li><a href="../users/indexUser.html">Manage Users</a></li>
+          <li><a href="../topics/indexTopic.html">Manage Topics</a></li>
+        </ul>
+      </div>
+      <!-- end of left sidebar -->
 
+      <!-- admin content -->
+      <div class="admin-content">
+        <div class="button-group">
+          <a href="createPost.html" class="btn btn-big">Add Post</a>
+          <a href="indexPost.html" class="btn btn-big">Manage Post</a>
+        </div>
 
+        <div class="content">
+          <h2 class="page-title">Add Posts</h2>
 
+          <form action="createPost.html" method="post">
+            <div>
+              <label>Title</label>
+              <input type="text" name="title" class="text-input" />
+              <label>Body</label>
+              <div id="body"></div>
+            </div>
+            <div>
+              <label>Topic</label>
+              <select name="topic" class="text-input">
+                <option value="Poetry">Poetry</option>
+                <option value="Life Lessons">Life Lessons</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-big">Add Post</button>
+          </form>
+        </div>
+      </div>
+      <!-- end of admin content -->
     </div>
     <!-- end of page wrapper -->
-     
-
 
     <!-- JQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-     <!-- custom script -->
-      <script src="../../script.js"></script>
+    <!-- custom script -->
+    <script src="../../script.js"></script>
+
+    <!-- ckeditor 5 -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/47.5.0/ckeditor5.umd.js"></script>
+    <script>
+      const { ClassicEditor, Essentials, Paragraph, Heading, Bold, Italic, Font } =
+        CKEDITOR;
+      // Create a free account and get <YOUR_LICENSE_KEY> 
+      // active, expires on Feb 26, 2027
+      // https://portal.ckeditor.com/organizations/3fawvgpjndv8/subscriptions/wbWTH7epW9-v/keys
+      ClassicEditor.create(document.querySelector("#body"), {
+        licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDM2ODYzOTksImp0aSI6IjVkZmE5YzkxLTc5NzEtNDVmYi05YWI4LTM4ODMxZjUxMTQxMiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJlNjhlZmNjOCJ9.WjgST9hw5OUz1BBX2jN8V2hauyq5KGjqDqi-3AzHRkczZgmgHJBlkxRXNnf3jC_35kMTLeXVLlEKi1fhEkwHXg",
+        plugins: [Essentials, Paragraph, Heading, Bold, Italic, Font],
+        toolbar: [
+          "undo",
+          "redo",
+          "|",
+          "heading",
+          "|",
+          "bold",
+          "italic",
+          "|",
+          "fontSize",
+          "fontFamily",
+          "fontColor",
+          "fontBackgroundColor",
+        ],
+      })
+        .then((body) => {
+          window.body = body;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    </script>
   </body>
 </html>
