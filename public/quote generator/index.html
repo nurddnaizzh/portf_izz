@@ -12,8 +12,8 @@
         <blockquote id="quote">Loading...</blockquote>
         <span id="author">Loading...</span>
         <div>
-            <button>New Quote</button>
-            <button><img src="image.png">Tweet</button>
+            <button onclick="getquote(api_url)">New Quote</button>
+            <button onclick="tweet()"><img src="image.png">Tweet</button>
         </div>
     </div>
 
@@ -33,6 +33,9 @@
 
         getquote(api_url);
 
+        function tweet() {
+            window.open("https://twitter.com/intent/tweet?text=" + quote.innerHTML + " - " + author.innerHTML + "---- by " + author.innerHTML, "Tweet Window", "width=600, height=400");
+        }
     </script>
 </body>
 </html>
