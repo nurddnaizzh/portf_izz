@@ -48,3 +48,23 @@ nav ul li a {
     font-size: 30px;
     display: none;
 }
+
+@media (max-width: 600px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+    }
+    nav ul li {
+        padding: 20px;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menuList {
+        transition: all 0.5s ease;
+    }
+}
