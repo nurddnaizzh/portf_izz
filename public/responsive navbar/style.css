@@ -28,6 +28,7 @@ nav {
 nav ul {
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 nav ul li {
@@ -57,6 +58,8 @@ nav ul li a {
         flex-direction: column;
         text-align: center;
         background: #004274;
+        gap: 0;
+        overflow: hidden;
     }
     nav ul li {
         padding: 20px;
