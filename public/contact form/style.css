@@ -279,3 +279,12 @@ textarea.input {
     top: calc(50% - 180px);
     left: calc(50% - 180px);
 }
+
+.square {
+    position: absolute;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(181%, 11%);
+    opacity: 0.2;
+}
