@@ -21,3 +21,16 @@ getButton.addEventListener("click", e => {
     e.preventDefault(); // preventing form from submitting
     getExchangeRate();
 });
+
+function getExchangeRate() {
+    const amount = document.querySelector(".amount input");
+    let amountVal = amount.value;
+
+    // if user don't enter any value or enter 0 then put 1 value by default in the input field
+    if(amountVal == "" || amountVal == "0") {
+        amount.value = "1";
+        amountVal = 1;
+    }
+
+    let url = 'https://v6.exchangerate-api.com/v6/b66028e64b6bfd1e9c13183e/latest/USD';
+}
