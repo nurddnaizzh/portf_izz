@@ -40,6 +40,16 @@ getButton.addEventListener("click", e => {
     getExchangeRate();
 });
 
+const exchangeIcon = document.querySelector(".drop-list .icon");
+exchangeIcon.addEventListener("click", () => {
+    let tempCode = fromCurrency.value; // temporary currency code of FROM drop list
+    fromCurrency.value = toCurrency.value; // passing TO currency code to FROM currency code
+    toCurrency.value = tempCode; // passing temporary currency code to TO currency code
+    loadFlag(fromCurrency); // calling loadFlag with passing select element of FROM
+    loadFlag(toCurrency); // calling loadFlag with passing select element of TO
+    getExchangeRate();
+});
+
 function getExchangeRate() {
     const amount = document.querySelector(".amount input"), exchangeRateTxt = document.querySelector(".exchange-rate");
     let amountVal = amount.value;
@@ -60,5 +70,8 @@ function getExchangeRate() {
         let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
         exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`;
         // console.log(totalExchangeRate);
+    }).catch(() =>{
+        // if user is offline or any other error occured while fetching data then  catch function will run and error message will display to user
+        exchangeRateTxt.innerText = "Something went wrong";
     });
 }
