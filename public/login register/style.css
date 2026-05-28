@@ -48,7 +48,31 @@ h2 {
     font-size: 1em;
     color: #fff;
     pointer-events: none;
+    transition: .5s;
 }
+
+.input-box input:focus~label, .input-box input:valid~label {
+    top: -5px;
+}
+
+/* 
+.input-box input:focus~label -> When the input is focused, target the label beside it. 
+
+.input:valid -> keeps the label floating upward even after the user stops focusing the input
+
+**Without :valid:**
+
+user clicks input → label moves up
+user types text
+user clicks outside → label falls back down
+
+That would overlap the typed text.
+
+**With :valid:**
+
+once text is entered correctly,
+label stays above permanently.
+*/
 
 .input-box input {
     width: 100%;
